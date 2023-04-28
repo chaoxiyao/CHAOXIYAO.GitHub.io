@@ -3,35 +3,32 @@
 <head>
 	<title>背景视频网页</title>
 	<style>
-		h1 {
-				  text-align: center;
-			line-height: 1.618; /* 设置行高为字体大小的1.2倍 */
-				}
 		body {
-			margin: 0;
-			padding: 0;
+				
+			filter: brightness(75%);
+			background-image: url("background.jpg");
+			background-size: cover;
+			background-position: center;
+			font-family: "Noto Sans SC", sans-serif;
+			text-align: center;
+			line-height: 1.2;
+			/* 使用 filter 属性将背景图片变暗 */
+			
 		}
-		video {
-			position: fixed;
-			top: 0;
-			left: 0;
-			min-width: 100%;
-			min-height: 100%;
-			z-index: -1;
-			filter: brightness(0.5); /* 添加一个明暗度的滤镜 */
+		
+		h1, h2, h3, h4, h5, h6 {
+			font-family: "微软雅黑", sans-serif;
+			text-align: center;
+			line-height: 1.2;
+			color: #fff; /* 将颜色设置为白色 */
 		}
-		.overlay {
-			position: absolute;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 100%;
-			background-color: rgba(0, 0, 0, 0.5); /* 添加一个半透明覆盖层 */
-			z-index: 1;
+		
+		/* 其他图片的样式 */
+		.other-img {
+			display: block;
+			margin: 0 auto;
+			width: 50%;
 		}
-		h1 {
-    	font-family: "Noto Sans SC", sans-serif;
-				}
 	</style>
 </head>
 <body>
@@ -50,7 +47,7 @@
 	<br>
 	这里就是水清七（7）班官网
 	<br>
-	网址暂为<br>77lilizi.1919810.com
+	网址暂为<br>77lilizi.xyz
 	<br>等我财力雄厚之后会租借
 	<br>77lilizi.com
 	<br>这个站具体干啥我还没想好
