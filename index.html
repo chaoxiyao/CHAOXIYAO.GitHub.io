@@ -1,14 +1,25 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>背景视频网页</title>
+	<title>hi！</title>
 	<style>
 		body {
-				
-			filter: brightness(75%);
-			background-image: url("background.jpg");
-			background-size: cover;
-			background-position: center;
+			font-size: 5vw;
+			line-height: 1.5;
+			margin: 0;
+			padding: 0;
+						filter: brightness(75%);
+			background-image: url('background.jpg');
+		.parent-element {
+			  display: flex;
+			  justify-content: center;
+			  align-items: center;}
+			
+			  background-repeat: no-repeat;
+			  background-attachment: fixed;
+			  background-size: cover;
+			  background-position: center;
+		
 			font-family: "Noto Sans SC", sans-serif;
 			text-align: center;
 			line-height: 1.2;
@@ -17,8 +28,7 @@
 		}
 		
 		h1, h2, h3, h4, h5, h6 {
-			font-family: "微软雅黑", sans-serif;
-			text-align: center;
+					
 			line-height: 1.2;
 			color: #fff; /* 将颜色设置为白色 */
 		}
@@ -28,6 +38,23 @@
 			display: block;
 			margin: 0 auto;
 			width: 50%;
+		}
+		h1, h2, h3 {
+			font-size: 3vw;
+		}
+
+		p {
+			margin-bottom: 1.5em;
+		}
+
+		@media (max-width: 600px) {
+			body {
+				font-size: 3vw;
+			}
+
+			h1, h2, h3 {
+				font-size: 2vw;
+			}
 		}
 	</style>
 </head>
