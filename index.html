@@ -1,71 +1,186 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN">
 <head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>hi！</title>
 	<style>
+		img {
+  max-width: auto;
+  height: auto;
+}
+
+		#news {
+    padding: 30px;
+  }
+  #gallery {
+    padding: 30px;
+  }
+		#about {
+    background-image: url('background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+	
+}
+		
 		body {
-			font-size: 5vw;
-			line-height: 1.5;
+			font-family: Arial, Helvetica, sans-serif;
 			margin: 0;
 			padding: 0;
-			filter: brightness(75%);
-			background-image: url('background.jpg');
-			background-repeat: no-repeat;
-			background-attachment: fixed;
-			background-size: cover;
-			background-position: center;
-			font-family: "Noto Sans SC", sans-serif;
-			text-align: center;
-			line-height: 1.2;
 		}
 		
-		h1, h2, h3, h4, h5, h6 {
-			line-height: 1.2;
-			color: #fff;
+		header {
+			background-color: #1248de;
+			color: #ffffff;
+			padding: 60px;
 		}
 		
-		.other-img {
-			display: block;
-			margin: 0 auto;
-			width: 50%;
+		h1 {
+			font-size: 36px;
+			margin: 0;
+			
 		}
 		
-		h1, h2, h3 {
-			font-size: 3vw;
+		nav ul {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+			display: flex;
 		}
-
+		
+		nav li {
+			margin-right: 20px;
+		}
+		
+		nav a {
+			color: #FFFFFF;
+			text-decoration: none;
+		}
+		
+		nav a:hover {
+			color: #ff7738;
+		}
+		
+		section {
+			padding: 120px;
+		}
+		#about h2 {
+			font-size: 24px;
+			margin: 0 0 30px 0;
+			color: #ffffff;
+		}
+		h2 {
+			font-size: 24px;
+			margin: 0 0 30px 0;
+			color: #000000;
+		}
+		
 		p {
-			margin-bottom: 1.5em;
+			line-height: 1.5;
+			margin: 0 0 20px 0;
 		}
-
-		@media (max-width: 600px) {
-			body {
-				font-size: 3vw;
+		#about p {
+			line-height: 1.5;
+			margin: 1 0 5px 0;
+			color: #FFFFFF;
+		}
+		ul {
+			list-style: disc;
+			margin: 0 0 20px 40px;
+		}
+		
+		.gallery-container {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+		}
+		
+		.gallery-container img {
+			width: 30%;
+			margin-bottom: 20px;
+		}
+		
+		@media (max-width: 768px) {
+			.gallery-container img {
+				width: 45%;
 			}
-
-			h1, h2, h3 {
-				font-size: 2vw;
-			}
+		}
+		
+		footer {
+			background-color: #bbbbd0;
+			padding: 10px;
+			text-align: center;
 		}
 	</style>
 </head>
 <body>
-	<video autoplay loop muted>
-		<source src="your-video-file.mp4" type="video/mp4">
-	</video>
-	<div class="overlay"></div>
-	<h1>
-		你好<br>
-		欢迎你<br>
-		来到这里<br>
-		如果不出意外的话<br>
-		这里就是水清七（7）班官网<br>
-		网址暂为<br>77lilizi.xyz<br>
-		等我财力雄厚之后会租借<br>
-		77lilizi.com<br>
-		这个站具体干啥我还没想好<br>
-		主要就是丢一些我们班的表情包进去<br>
-		就是用我的屎山代码估计得写半天<br>
-	</h1>
-</body>
-</html>
+	<header>
+		<h1>班级网页</h1>
+		<br>
+		
+		<nav>
+			<ul>
+				<li><a href="">还妹写呢！</a></li>
+				<li><a href="">还妹写呢！</a></li>
+				<li><a href="">还妹写呢！</a></li>
+				<li><a href="">还妹写呢！</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<section id="about">
+		<h2>你好</h2>
+		<p>这是一个关于我们班的介绍。<br>具体内容之后再写吧<br>祝我滴屎山代码好运吧！😅</p>
+	</section>
+
+	<section id="news">
+		<h2>写事儿的</h2>
+		<ul>
+			<li>2023年5月6日
+			<p>熬夜边写作业写demo</p>
+		</li>
+		<li>写啥之后再说吧
+			<p>写啥之后再说吧</p>
+		</li>
+		<li>写啥之后再说吧
+			<p>写啥之后再说吧</p>
+		</li>
+		<li>写啥之后再说吧
+			<p>写啥之后再说吧</p>
+		</li>
+		<li>写啥之后再说吧
+			<p>写啥之后再说吧</p>
+		</li>
+		<li>写啥之后再说吧
+			<p>写啥之后再说吧</p>
+		</li>
+	</ul>
+</section>
+
+<section id="gallery">
+	<h2>班级风采</h2>
+	<div class="gallery-container">
+		<img src="image1.png" alt="6">
+		<img src="image2.png" alt="6">
+		<img src="image3.png" alt="6">
+		<img src="image4.png" alt="6">
+		<img src="image5.png" alt="6">
+		<img src="image6.png" alt="6">
+	</div>
+</section>
+
+<section id="contact">
+	<h2>联系我们</h2>
+	<p>至少现在看到这网站的都有我联系方式了吧😅：</p>
+	<ul>
+		<li>电话：17891969450</li>
+		<li>邮箱：mc_cxy123@outlook.com</li>
+		<li>钉钉：linustechtips</li>
+	</ul>
+</section>
+
+<footer>
+	<p>版权所有 &copy; 锂离子</p>
+</footer>
+
