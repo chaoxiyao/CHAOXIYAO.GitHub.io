@@ -1,0 +1,45 @@
+:root {
+    font-size: 20px;
+    font-family: "Helvetica Neue", Helvetica;
+  }
+  
+  body {
+    background-image: conic-gradient(
+      #0f5711,
+      #e99c20,
+      #1d3782,
+      #714192,
+      #e70e0e,
+      #05ae21,
+      #0f5711
+    );
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  div {
+    margin: 100vh 0;
+    font-size: 3.4rem;
+    font-weight: 600;
+    letter-spacing: -1.2px;
+    color: #fff;
+    line-height: 1.22em;
+    width: 800px;
+  }
+  
+  span {
+    --opacity: 0.3;
+    opacity: var(--opacity);
+  }
+  
+  .pro {
+    display: block;
+    margin-top: 2.2rem;
+  }
+  
