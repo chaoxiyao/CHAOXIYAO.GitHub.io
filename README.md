@@ -1,4 +1,4 @@
-## 跳转链接：[点击这里!!!](https://77lilizi.xyz)
+## 跳转链接：[点击这里!!!](https://home.77lilizi.xyz/)
 
 # **欢迎来到77lilizi.xyz的开源后台页面！**
 
