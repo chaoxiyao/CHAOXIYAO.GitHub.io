@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        input[type="text"] {
+            padding: 5px;
+            font-size: 16px;
+            width: 300px;
+        }
+
+        button {
+            padding: 8px 12px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        #result {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h2>查找重复字</h2>
+    <input type="text" id="textInput" placeholder="输入文字">
+    <button onclick="findDuplicates()">查找</button>
+
+    <div id="result"></div>
+
+    <script>
+        function findDuplicates() {
+            var textInput = document.getElementById("textInput").value;
+            var duplicateChars = [];
+
+            for (var i = 0; i < textInput.length; i++) {
+                var char = textInput[i];
+                if (textInput.indexOf(char) !== i && duplicateChars.indexOf(char) === -1) {
+                    duplicateChars.push(char);
+                }
+            }
+
+            var resultDiv = document.getElementById("result");
+            resultDiv.innerHTML = "";
+
+            if (duplicateChars.length > 0) {
+                var resultHTML = "<h3>重复的字：</h3>";
+
+                for (var j = 0; j < duplicateChars.length; j++) {
+                    var duplicateChar = duplicateChars[j];
+                    var regex = new RegExp(".{0,3}" + duplicateChar + ".{0,3}", "g");
+                    var matches = textInput.match(regex);
+
+                    resultHTML += "<p>" + duplicateChar + " 在文章中出现的位置：</p>";
+                    resultHTML += "<ul>";
+
+                    for (var k = 0; k < matches.length; k++) {
+                        var match = matches[k];
+                        resultHTML += "<li>" + match + "</li>";
+                    }
+
+                    resultHTML += "</ul>";
+                }
+
+                resultDiv.innerHTML = resultHTML;
+            } else {
+                resultDiv.innerHTML = "<p>没有重复的字。</p>";
+            }
+        }
+    </script>
+</body>
+</html>
