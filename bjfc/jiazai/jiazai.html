@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>图片加载进度</title>
+    <style>
+        #loading-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #f0f0f0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+        }
+
+        #loading-text {
+            font-size: 24px;
+            margin-bottom: 16px;
+        }
+
+        #loading-progress {
+            width: 200px;
+            height: 20px;
+            background-color: #ccc;
+        }
+
+        #loading-progress-bar {
+            height: 100%;
+            background-color: #4caf50;
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="loading-screen">
+        <div id="loading-text">请稍等，正在加载图片...</div>
+        <div id="loading-progress">
+            <div id="loading-progress-bar"></div>
+        </div>
+    </div>
+
+    <!-- 剩余网站内容 -->
+    <div id="content" class="hidden">
+        <!-- 网站内容 -->
+    </div>
+
+    <script>
+        // 等待DOM加载完成
+        document.addEventListener("DOMContentLoaded", function(event) {
+            // 预加载的图片URL数组
+            var imageUrls = [
+                "image1.jpg",
+                "image2.jpg",
+                "image3.jpg"
+            ];
+
+            var totalImages = imageUrls.length;
+            var loadedImages = 0;
+
+            // 更新加载进度条
+            function updateProgress() {
+                var progressBar = document.getElementById("loading-progress-bar");
+                var progressPercent = Math.floor((loadedImages / totalImages) * 100);
+                progressBar.style.width = progressPercent + "%";
+
+                if (loadedImages === totalImages) {
+                    // 图片加载完成后隐藏加载屏幕
+                    var loadingScreen = document.getElementById("loading-screen");
+                    var content = document.getElementById("content");
+                    loadingScreen.style.display = "none";
+                    content.classList.remove("hidden");
+                }
+            }
+
+            // 加载图片
+            function loadImage(url) {
+                var image = new Image();
+                image.src = url;
+
+                image.addEventListener("load", function() {
+                    loadedImages++;
+                    updateProgress();
+                });
+            }
+
+            // 预加载图片
+            for (var i = 0; i < totalImages; i++) {
+                loadImage(imageUrls[i]);
+            }
+        });
+    </script>
+</body>
+</html>
